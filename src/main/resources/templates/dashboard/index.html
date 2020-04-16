@@ -1,0 +1,49 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+  <div layout:fragment="breadcrumb">
+    <section id="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+          <!-- <li class="breadcrumb-item active">Library</li> -->
+        </ol>
+      </div>
+    </section>
+  </div>
+
+  <!-- <th:block layout:fragment="content"> -->
+    <div class="col-md-9" layout:fragment="content">
+      <!-- Website Overview -->
+      <div class="card border-light mb-3">
+        <div class="card-header text-white bg-info">
+          Overview
+        </div> <!-- /.end card-header-->
+        <div class="card-body">
+          <div class="row justify-content-center">
+            <div class="card card-box">
+              <div class="card-body">
+                <h2><ion-icon name="people-sharp" class="ion-icon-dark ion-icon-xl"></ion-icon> 500</h2>
+                <h3>Total WP</h3>
+              </div>
+            </div>
+
+            <div class="card card-box">
+              <div class="card-body">
+                <h2><ion-icon name="mail-sharp" class="ion-icon-dark ion-icon-xl"></ion-icon> 200</h2>
+                <h3>Pesan Masuk</h3>
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- ./end card-body -->
+      </div>          
+    </div>
+  <!-- </th:block> -->
+
+</body>
+</html>

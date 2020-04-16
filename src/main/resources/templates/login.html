@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login - SMS Center</title>
+	<!-- style css -->
+	<link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+	<div class="login-box">
+		<div class="box-title">
+			<img src="" alt="logo">
+			SMS-Center
+		</div>
+		<!-- <div th:if="@{parm.error}">
+			<div class="alert">
+				<p>Username atau password salah</p>
+			</div>
+		</div> -->
+		<form th:action="@{/login}" method="POST">
+			<div class="h2">Login</div>
+			<input type="text" name="username" placeholder="username">
+			<input type="password" name="password" placeholder="password">
+			<input type="submit" value="Login">
+		</form>
+	</div>
+</body>
+</html>

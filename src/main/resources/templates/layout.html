@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">SMS Center</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <!-- bootstrap-table -->
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+  <!-- ionic-icon pack -->
+  <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+  <!-- HEADER -->
+  <header id="header"></header>
+
+
+  <!-- BREADCRUMB -->
+  <th:block layout:fragment="breadcrumb">
+    <section id="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <!-- <li class="breadcrumb-item active">Library</li> -->
+        </ol>
+      </div>
+    </section>
+  </th:block>
+
+  <!-- MAIN -->
+  <section id="main">
+    <div class="container">
+      <div class="row">
+        <!-- Side Navigation -->
+        <th:block th:replace="~{fragments/side-nav :: sidenav}">iseng</th:block>
+        
+        <th:block layout:fragment="content">
+          <!-- contentnya cuy -->
+        </th:block>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <p>Copyright &copy; PT. Mitra Prima Utama 2020</p>   
+  </footer>
+
+  <script src="/bootstrap/js/jquery.min.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- bootstrap table js lib -->
+  <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table-locale-all.min.js"></script>
+
+</body>
+</html>
